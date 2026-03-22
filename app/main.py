@@ -20,7 +20,7 @@ def root():
 
 
 
-@app.post("/")
+@app.post("/predict")
 def predict_api(data:schema.systemData):
     input_values = list(data.model_dump().values())
     result=predict_failure(model,input_values)
