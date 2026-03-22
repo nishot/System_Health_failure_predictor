@@ -1,5 +1,5 @@
 def get_risk_level(prob):
-    if prob > 0.3:
+    if prob < 0.3:
         return "LOW"
     elif prob <0.7:
         return "MEDIUM"
@@ -14,5 +14,6 @@ def predict_failure(model,input_data):
 
     return {
         "failure_probability":round(prob,3),
-        "risk level":risk
+        "risk_level":risk
     }
+
